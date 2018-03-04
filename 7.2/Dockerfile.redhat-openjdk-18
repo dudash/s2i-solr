@@ -14,7 +14,10 @@
 #
 # ------------------------------------------------------------------------
 #
-# This is a Dockerfile for the dudash/solr-openshift:7.2 image.
+# -- PLEASE USE INTERNALLY ONLY --
+# This is a Dockerfile uses Red Hat's OpenJDK base image and thus cannot 
+# be pushed to a public container registry.
+# -- PLEASE USE INTERNALLY ONLY --
 
 FROM redhat-openjdk-18/openjdk18-openshift
 
