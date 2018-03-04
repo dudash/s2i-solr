@@ -19,8 +19,8 @@ SOLR versions available
 * 7.2.1
 
 OS versions available
-* rhel7 = RHEL 7
-* centos7 = CentOS 7
+* redhat-openjdk = RHEL 7 based OpenJDK from access.redhat.com
+* jboss-openjdk (centos7) = CentOS 7 based OpenJDK for community development use
 
 
 ## Using this image
@@ -31,7 +31,7 @@ You'll need to have the [s2i tool](https://github.com/openshift/source-to-image)
 
 ```shell
 $ docker search dudash/solr
-$ docker pull dudash/solr-PLATFORM:TAG
+$ docker pull dudash/solr-openshift:TAG
 ```
 
 ### Using with github projects
@@ -40,7 +40,7 @@ Use the `s2i` tool to build the final image that contains your SOLR search servi
 
 * Hello SOLR from github example
 ```shell
-$ s2i build https://github.com/dudash/openshiftexamples-solr.git dudash/solr-rhel7:latest demo-solr
+$ s2i build https://github.com/dudash/openshiftexamples-solr.git dudash/solr-openshift-jboss:latest demo-solr
 $ docker run demo-solr
 ```
 
@@ -78,7 +78,7 @@ $ make build VERSION=<version> TARGET=<OS>
 
 ### Repo organization
 <pre>
-**[solr-version]**: Dockerfile to build container images from
+**[solr-version]/Dockerfile**: Dockerfile to build container images from
 **[solr-version]/test/test-app**: Sample application used for tests
 **hack/**: Folder containing scripts which are responsible for the build and test actions performed by the Makefile
 **s2i/**: Build scripts which will be injected into the builder image and executed during application source code builds
