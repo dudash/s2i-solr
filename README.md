@@ -19,8 +19,8 @@ SOLR versions available
 * 7.2.1
 
 OS versions available
-* redhat-openjdk = RHEL 7 based OpenJDK from access.redhat.com
-* jboss-openjdk (centos7) = CentOS 7 based OpenJDK for community development use
+* redhat = RHEL 7 based OpenJDK from access.redhat.com
+* jboss = CentOS 7 based OpenJDK for community development use
 
 
 ## Using this image
