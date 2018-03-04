@@ -31,7 +31,7 @@ You'll need to have the [s2i tool](https://github.com/openshift/source-to-image)
 
 ```shell
 $ docker search dudash/solr
-$ docker pull dudash/solr-openshift:TAG
+$ docker pull dudash/solr-openshift-<OS>:<TAG>
 ```
 
 ### Using with github projects
