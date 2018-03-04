@@ -14,7 +14,7 @@
 #
 # ------------------------------------------------------------------------
 #
-# This is a Dockerfile for the dudash/solr-openshift:7.2 image.
+# This is a Dockerfile for the dudash/solr-openshift-jboss:7.2 image.
 
 FROM fabric8/java-jboss-openjdk8-jdk
 
