@@ -1,6 +1,6 @@
 # SOLR source-to-image
 
-** THIS IS IN PROGRESS - YMMV **
+<h1> THIS IS IN PROGRESS - COMING SOON </h1>
 
 <img src="https://www.openshift.com/images/logos/openshift/Logotype_RH_OpenShift_wLogo_RGB_Gray.svg" alt="OCP logo" height="70" >
 
