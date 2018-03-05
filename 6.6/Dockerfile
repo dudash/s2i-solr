@@ -15,7 +15,7 @@
 #
 # ------------------------------------------------------------------------
 #
-# This is a Dockerfile for the dudash/solr-jboss image.
+# This is a Dockerfile for the dudash/solr-66-jboss image.
 
 FROM fabric8/java-jboss-openjdk8-jdk
 
