@@ -4,7 +4,8 @@
 
 <img src="https://www.openshift.com/images/logos/openshift/Logotype_RH_OpenShift_wLogo_RGB_Gray.svg" alt="OCP logo" height="70" >
 
-This repository contains the source for configuring and building a SOLR serach service using reproducible Docker images with [source-to-image](https://github.com/openshift/source-to-image).
+This repository contains source code and instructions for building a builder. You can use the builder to package SOLR with schema configuration as reproducible Docker container images using [source-to-image](https://github.com/openshift/source-to-image).
+
 
 For more information about using these images with OpenShift, please see the
 official [OpenShift Documentation](https://docs.openshift.org/latest/architecture/core_concepts/builds_and_image_streams.html#source-build).
@@ -13,12 +14,12 @@ For more information about the open source SOLR search engine goto the [Apache w
 
 <h3>Below you can read how to build and how to use.  FYI, you don't have to build this repo, you can use a prebuilt image - it's available on docker hub.<h3>
 
-## Versions available
+## Versions/targets available
 
 SOLR versions available
 * 7.2.1
 
-OS versions available
+Target versions available
 * redhat = RHEL 7 based OpenJDK from access.redhat.com
 * jboss = CentOS 7 based OpenJDK for community development use
 
@@ -27,11 +28,11 @@ OS versions available
 
 You'll need to have the [s2i tool](https://github.com/openshift/source-to-image).
 
-### Find and get the image you want (VERSION and PLATFORM)
+### Find and get the image you want (version and target)
 
 ```shell
 $ docker search dudash/solr
-$ docker pull dudash/solr-openshift-<OS>:<TAG>
+$ docker pull dudash/solr-<version>-<target>:<tag>
 ```
 
 ### Using with github projects
@@ -40,7 +41,7 @@ Use the `s2i` tool to build the final image that contains your SOLR search servi
 
 * Hello SOLR from github example
 ```shell
-$ s2i build https://github.com/dudash/openshiftexamples-solr.git dudash/solr-openshift-jboss:latest demo-solr
+$ s2i build https://github.com/dudash/openshiftexamples-solr.git dudash/solr-66-jboss:latest demo-solr
 $ docker run demo-solr
 ```
 
@@ -71,7 +72,7 @@ To prepare the s2i builder image:
 ```shell
 $ git clone https://github.com/dudash/s2i-solr.git
 $ cd s2i-solr
-$ make build VERSION=<version> TARGET=<OS>
+$ make build VERSION=<version> TARGET=<target>
 ```
 
 ### Repo organization
