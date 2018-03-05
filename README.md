@@ -57,8 +57,6 @@ $ oc create -n openshift -f https://raw.githubusercontent.com/dudash/s2i-solr/ma
 
 Note: Drop the ```-n openshift``` if you don't have admin rights... or ask your admin to create it.
 
-:warning: OpenShift is expects your conatiners to keep running. So some of the above examples are not the best to try in Open Shift.  If you don't have your own code and need an example, try this one: [Hello Kitura](https://github.com/dudash/openshiftexamples-hellokitura)
-
 ## Environment variables
 ---------------------
 To set environment variables, you can place them as a key value pair into a `.s2i/environment`
@@ -79,6 +77,7 @@ $ make build VERSION=<version> TARGET=<OS>
 ### Repo organization
 <pre>
 **[solr-version]/Dockerfile**: Dockerfile to build container images from
+**[solr-version]/Dockerfile.xxx**: Dockerfile to build alternative container images
 **[solr-version]/test/test-app**: Sample application used for tests
 **hack/**: Folder containing scripts which are responsible for the build and test actions performed by the Makefile
 **s2i/**: Build scripts which will be injected into the builder image and executed during application source code builds
